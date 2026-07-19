@@ -1,8 +1,8 @@
 package main
 
-import "fmt"
+import postgres "FINANCE/Postgres"
 
 func main() {
-	fmt.Println("Its about to start any min 🔥")
+	postgres.ConnectDB()
 
 }
