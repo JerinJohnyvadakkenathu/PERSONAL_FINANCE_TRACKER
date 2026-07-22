@@ -1,8 +1,12 @@
 package main
 
-import postgres "FINANCE/Postgres"
+import (
+	models "FINANCE/Models"
+	postgresql "FINANCE/Postgresql"
+)
 
 func main() {
-	postgres.ConnectDB()
+	postgresql.ConnectDB()
+	postgresql.DB.AutoMigrate(&models.User{})
 
 }

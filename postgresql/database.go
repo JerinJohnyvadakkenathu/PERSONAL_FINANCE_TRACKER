@@ -1,4 +1,4 @@
-package postgres
+package postgresql
 
 import (
 	"fmt"
@@ -12,7 +12,7 @@ var DB *gorm.DB
 
 func ConnectDB() {
 
-	dsn := "host=localhost user=postgres password=pass123 dbname=PERSONAL_FINANCE_TRACKER port=5432 sslmode=disable"
+	dsn := "host=localhost user=postgres password=pass123 dbname=personal_finance_tracker port=5432 sslmode=disable"
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatal("Database connection failed", err)
